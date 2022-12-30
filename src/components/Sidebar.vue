@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <a href="">Now Playing</a>
+    <a href="/">Now Playing</a>
     <a href="">Coming Soon</a>
     <a href="">Theatre</a>
     <a href="">Promotion</a>

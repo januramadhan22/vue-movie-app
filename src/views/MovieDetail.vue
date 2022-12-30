@@ -1,11 +1,27 @@
 <template>
   <div class="w-full h-[1000px] flex flex-row">
     <SidebarVue />
-    <div class="movie-detail">
-      <h2>{{ movie.Title }}</h2>
-      <p>{{ movie.Year }}</p>
-      <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
-      <p>{{ movie.Plot }}</p>
+    <div class="movie-detail w-full min-h-screen flex flex-col gap-4 mx-9 my-9">
+      <h2 class="text-white text-2xl font-bold">{{ movie.Title }}</h2>
+      <div class="w-full flex gap-5 text-white">
+        <img
+          :src="movie.Poster"
+          alt="Movie Poster"
+          class="featured-img w-[287px] h-[404px] rounded-xl shadow-md shadow-gray-600"
+        />
+        <div class="flex flex-col gap-5">
+          <div>
+            <p>Release Date: {{ movie.Year }}</p>
+            <p>Language: {{ movie.Language }}</p>
+            <p>Genre: {{ movie.Genre }}</p>
+            <p>Cast & Crew: {{ movie.Actors }}</p>
+            <p>Director: {{ movie.Director }}</p>
+            <p>Length: {{ movie.Runtime }}</p>
+          </div>
+          <p class="text-2xl font-bold">SINOPSIS</p>
+          <p>{{ movie.Plot }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
