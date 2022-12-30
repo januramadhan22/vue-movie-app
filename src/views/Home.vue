@@ -1,13 +1,23 @@
 <template>
-  <div class="w-full h-[1000px] flex flex-row">
+  <div class="w-full h-auto flex flex-row">
     <SidebarVue />
-    <div v-for="movie in movies" :key="movie.imdbID" class="movie-list">
-      <router-link :to="`/movie/` + movie.imdbID">
-        <div class="w-12 h-48">
-          <img :src="movie.Poster" alt="Movie Poster" class="block h-32" />
-          <h3>{{ movie.Title }}</h3>
-        </div></router-link
+    <div class="w-8/12 h-full grid grid-cols-3 justify-center gap-5 mx-9 my-9">
+      <div
+        v-for="movie in movies"
+        :key="movie.imdbID"
+        class="movie-list w-full h-full my-4"
       >
+        <router-link :to="`/movie/` + movie.imdbID">
+          <div class="w-full h-full flex flex-col items-center gap-4">
+            <img
+              :src="movie.Poster"
+              alt="Movie Poster"
+              class="w-[287px] h-[404px] rounded-xl shadow-md shadow-gray-600"
+            />
+            <h3 class="text-center text-white">{{ movie.Title }}</h3>
+          </div></router-link
+        >
+      </div>
     </div>
   </div>
 </template>

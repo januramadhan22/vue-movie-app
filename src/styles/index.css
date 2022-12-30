@@ -54,12 +54,12 @@ body {
 }
 
 main {
-  height: 1000px;
+  min-height: 100vh;
 }
 
 .sidebar {
   width: 273px;
-  height: 100%;
+  min-height: 100vh;
   padding-top: 20px;
   background: #191c1f;
   display: flex;
